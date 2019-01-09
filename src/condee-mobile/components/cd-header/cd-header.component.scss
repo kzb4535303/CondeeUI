@@ -1,0 +1,17 @@
+.cd-header {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: solid 1px rgba(0,0,0,.1);
+    .cd-header-title {
+        min-height: 4.4rem;
+        line-height: 4.4rem;
+
+    }
+}
