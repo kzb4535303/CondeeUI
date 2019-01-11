@@ -1,5 +1,59 @@
 @import 'variable.scss';
 
+$button-md-margin-top: 4px;
+$button-md-margin-end:2px !default;
+$button-md-margin-bottom:4px !default;
+$button-md-margin-start:2px !default;
+$button-md-padding-top:0 !default;
+$button-md-padding-end:1.1em !default;
+$button-md-padding-bottom: 0 !default;
+$button-md-padding-start:1.1em !default;
+// Material Design Large Button
+// --------------------------------------------------
+$button-md-large-padding-top: 0 !default;
+$button-md-large-padding-end:1em !default;
+$button-md-large-padding-bottom:$button-md-large-padding-top !default;
+$button-md-large-padding-start:$button-md-large-padding-end !default;
+$button-md-large-height:2.8em !default;
+$button-md-large-font-size:20px !default;
+// Material Design Small Button
+// --------------------------------------------------
+$button-md-small-padding-top:                           0 !default;
+$button-md-small-padding-end:                           .9em !default;
+$button-md-small-padding-bottom:                        $button-md-small-padding-top !default;
+$button-md-small-padding-start:                         $button-md-small-padding-end !default;
+$button-md-small-height:                                2.1em !default;
+$button-md-small-font-size:                             13px !default;
+
+$button-md-border-radius:4px !default;
+$button-md-font-size: 14px !default;
+$button-md-font-weight: 500 !default;
+$button-md-letter-spacing: 0.06em;
+$button-md-box-shadow:0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
+$button-md-box-shadow-activated: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12) !default;;
+$button-md-opacity-disabled: .5 !default;
+$button-md-height:36px !default;
+$button-md-text-transform: uppercase !default;
+cd-button {
+    border-radius: $button-md-border-radius;
+    margin: $button-md-margin-top $button-md-margin-end $button-md-margin-bottom $button-md-margin-start ;
+    padding: $button-md-padding-top $button-md-padding-end  $button-md-padding-bottom  $button-md-padding-start  ;
+    font-size: $button-md-font-size;
+    font-weight: $button-md-font-weight;
+    letter-spacing: $button-md-letter-spacing;
+    display: inline-block;
+    position: relative;
+    height: $button-md-height;
+    box-shadow: $button-md-box-shadow;
+}
 .cd-button-primary {
-    background-color: $primaryColor
+    background-color: $primaryColor;
+    color: $whiteColor;
+}
+.button-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
