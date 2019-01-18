@@ -30,7 +30,7 @@ $button-md-font-size: 14px !default;
 $button-md-font-weight: 500 !default;
 $button-md-letter-spacing: 0.06em;
 $button-md-box-shadow:0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !default;
-$button-md-box-shadow-activated: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12) !default;;
+$button-md-box-shadow-activated: 0 6px 6px -4px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12) !default;;
 $button-md-opacity-disabled: .5 !default;
 $button-md-height:36px !default;
 $button-md-text-transform: uppercase !default;
@@ -45,6 +45,11 @@ cd-button {
     position: relative;
     height: $button-md-height;
     box-shadow: $button-md-box-shadow;
+    transition: all .5s
+}
+cd-button:active {
+    box-shadow: $button-md-box-shadow-activated;
+   
 }
 .cd-button-primary {
     background-color: $primaryColor;
