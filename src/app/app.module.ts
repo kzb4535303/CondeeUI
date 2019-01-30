@@ -5,14 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShareModule } from './share/share.module';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { RefreshComponent } from './refresh/refresh.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    RefreshComponent,
+    AlertComponent
   ],
   imports: [
-    AppRoutingModule,
+  AppRoutingModule,
     ShareModule,
     BrowserModule,
   ],

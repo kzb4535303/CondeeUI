@@ -1,5 +1,20 @@
-<p>
-  <!-- <cd-header [title]="'欢迎界面'"></cd-header> -->
-  欢迎使用condee-mobile UI
-  <cd-button>Primary</cd-button>
-</p>
+<cd-app>
+    <cd-header>
+        <ng-container start>
+          左侧
+        </ng-container>
+        <ng-container title>
+          CondeeUi
+        </ng-container>
+        <ng-container end>
+          右侧
+        </ng-container>
+    </cd-header>
+    <cd-body>
+      <div class="cd-paddingLR10">
+          欢迎使用condee-mobile UI
+          <cd-button>Primary</cd-button>
+          欢迎使用condee-mobile UI
+      </div>
+    </cd-body>
+</cd-app>

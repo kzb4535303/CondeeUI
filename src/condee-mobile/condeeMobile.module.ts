@@ -1,10 +1,27 @@
 import { NgModule } from "@angular/core";
-import { CdHeaderComponent } from './components/cd-header/cd-header.component';
-import { CdHeaderModule } from './components/cd-header/cd-header.module';
+import { CdHeaderComponent } from './components/layout/cd-header/cd-header.component';
+import { CdHeaderModule } from './components/layout/cd-header/cd-header.module';
 import { CdButtonModule } from './components/cd-button/cd-button.module';
-
+import { CdRefreshModule } from './components/cd-refresh/cd-refresh.module';
+import { CdAppModule } from './components/layout/cd-app/cd-app.module';
+import { CdbodyModule } from './components/layout/cd-body/cd-body.module';
+import { CdAlertModule } from './components/cd-alert/cd-alert.module';
 @NgModule({
-   imports: [CdHeaderModule, CdButtonModule],
-   exports: [CdHeaderModule, CdButtonModule]
+   imports: [
+      CdHeaderModule,
+      CdButtonModule,
+      CdRefreshModule,
+      CdAppModule,
+      CdbodyModule,
+      CdAlertModule
+   ],
+   exports: [
+      CdHeaderModule,
+      CdButtonModule,
+      CdRefreshModule,
+      CdAppModule,
+      CdbodyModule,
+      CdAlertModule
+   ],
 })
 export class CondeMobileModule{}
