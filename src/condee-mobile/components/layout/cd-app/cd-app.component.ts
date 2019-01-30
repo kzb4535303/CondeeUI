@@ -1,9 +1,10 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'cd-app',
-    template:`
+    template: `
         <ng-content></ng-content>
     `
 })
-export class CdAppComponent{}
+export class CdAppComponent {
+}

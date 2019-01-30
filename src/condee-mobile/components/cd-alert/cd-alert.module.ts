@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 import { CdAlertComponent } from './cd-alert.component';
 
 @NgModule({

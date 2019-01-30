@@ -1,8 +1,10 @@
-import { Injectable, ComponentRef } from "@angular/core";
-import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay'
+import { Injectable, ComponentRef } from '@angular/core';
+import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { PopupConfigInterface } from './interface/popup.interface';
 import { ComponentPortal } from '@angular/cdk/portal';
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class PopupService {
     overlay: Overlay = null;
     overlayRef: OverlayRef = null;
@@ -11,18 +13,23 @@ export class PopupService {
         this.overlay = this._overlay;
     }
     showPopup(showPopConfig: PopupConfigInterface) {
-        let overlayConfig = new OverlayConfig()
+        const overlayConfig = new OverlayConfig();
         overlayConfig.hasBackdrop = showPopConfig.hasBackdrop || false;
-        overlayConfig.positionStrategy = this.overlay.position().global().centerVertically().centerHorizontally()
-        this.overlayRef = this.overlay.create(overlayConfig)
+        overlayConfig.positionStrategy = this.overlay.position().global().centerVertically().centerHorizontally();
+        this.overlayRef = this.overlay.create(overlayConfig);
         this.overlayRef.backdropClick().subscribe(() => {
-            this.clearPopup()
-        })
-        this.componentRef = this.overlayRef.attach(new ComponentPortal(showPopConfig.component, null, showPopConfig.injector || null))
+        });
+        this.componentRef = this.overlayRef.attach(new ComponentPortal(showPopConfig.component, null, showPopConfig.injector || null));
+        this.componentRef.instance.ok = () => {
+            this.clearPopup();
+        };
+        this.componentRef.instance.cancel = () => {
+            this.clearPopup();
+        };
     }
     clearPopup() {
-        if(this.overlayRef) {
-            this.overlayRef.dispose()
+        if (this.overlayRef) {
+            this.overlayRef.dispose();
         }
     }
 }

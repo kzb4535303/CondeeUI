@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import { PopupService } from './../../../service/popup/popup.service';
 import { CdAlertComponent } from './../cd-alert.component';
 
@@ -10,6 +10,7 @@ export class AlertService {
     openAlert() {
         this.popupService.showPopup({
             component: CdAlertComponent,
-        })
+            hasBackdrop: true,
+        });
     }
 }

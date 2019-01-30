@@ -8,6 +8,8 @@
     background: rgba(0,0,0,.6);
 }
 .cd-dialog {
+    position: absolute;
+    display: table;
     z-index: 5000;
     width: 80%;
     max-width: 300px;
@@ -43,6 +45,20 @@
         display: -webkit-box;
         display: -webkit-flex;
         display: flex;
+        &:after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 1px;
+            border-top: 1px solid #d5d5d6;
+            color: #d5d5d6;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+        }
     }
     .cd-dialog__btn {
         display: block;

@@ -5,5 +5,5 @@ export interface PopupConfigInterface {
     component: ComponentType<any>;
     injector?: Injector;
     hasBackdrop?: boolean;
-    dismiss?: EventEmitter<any>
+    dismiss?: EventEmitter<any>;
 }

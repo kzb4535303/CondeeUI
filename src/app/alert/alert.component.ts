@@ -7,15 +7,11 @@ import { AlertService } from './../../condee-mobile/components/cd-alert/service/
   styleUrls: ['./alert.component.scss']
 })
 export class AlertComponent implements OnInit {
-
   constructor(private alertService: AlertService) {
-    
   }
-
   ngOnInit() {
   }
   openAlert() {
-    this.alertService.openAlert()
+    this.alertService.openAlert();
   }
-
 }
